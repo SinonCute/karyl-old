@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Xem anime vietsub hay tại Karyl.live, không giới hạn lượt xem, không quảng cáo.">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/img/icon/weblogo.png">
+    <title>Xem phim - Karyl</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+    <link href="node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
+    <link href="node_modules/libjass/libjass.css" rel="stylesheet">
+    <script src="node_modules/video.js/dist/video.min.js"></script>
+    <script src="node_modules/libjass/libjass.js"></script>
+    <link href="src/videojs.ass.css" rel="stylesheet">
+    <script src="src/videojs.ass.js"></script>
+
+    <link href="bower_components/videojs/dist/video-js.min.css" rel="stylesheet">
+    <link href="bower_components/libjass/libjass.css" rel="stylesheet">
+    <script src="bower_components/videojs/dist/video.min.js"></script>
+    <script src="bower_components/libjass/libjass.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="/img/icon/weblogo.png" alt="" width="50px" height="50px">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="">Dạng Anime <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">TV/Series</a></li>
+                                        <li><a href="#">Movie/Ova</a></li>
+                                        <li><a href="#">Sắp chiếu</a></li>
+                                        <li><a href="#">Đang chiếu</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Top Anime <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Theo Ngày</a></li>
+                                        <li><a href="#">Theo Mùa</a></li>
+                                        <li><a href="#">Theo Năm</a></li>
+                                        <li><a href="#">Yêu Thích</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Season <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Mùa Xuân</a></li>
+                                        <li><a href="#">Mùa Hạ</a></li>
+                                        <li><a href="#">Mùa Thu</a></li>
+                                        <li><a href="#">Mùa Đông</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Thư viện</a>
+                                </li>                          
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <input autocomplete="off" id="search" class="site-search__input" type="text">
+                        <button class="search-button" id="searchsubmit" type="submit"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+
+
+    <section class="anime-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <video id="player" class="video-js vjs-default-skin vjs-big-play-centered">
+                    </video>
+                    <script>
+                        var video = document.getElementById('player');
+                        var videoSrc = 'https://proxy.pearlsmp.fun/proxy?id=1015468037740183574/1072626342593564722/output1.m3u8';
+                        if (Hls.isSupported()) {
+                            var hls = new Hls();
+                            hls.loadSource(videoSrc);
+                            hls.attachMedia(video);
+                        }
+                        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                            video.src = videoSrc;
+                        }
+                    </script>
+                    <script>
+                        videojs('playe', {
+                            controls: true,
+                            nativeControlsForTouch: true,
+                            width: 1280,
+                            height: 640,
+                            playbackRates: [0.5, 1, 1.5, 2]
+                        });
+                        var vjs = videojs('player');
+                        var vjs_ass = vjs.ass({
+                            'src': ["subs/os.ass"],
+                            label: "vietsub",
+                            videoWidth: 640,
+                            videoHeight: 360,
+                        });
+
+                    </script>
+                </div>
+            </div>
+    </section>
+    <div>
+        <div>
+            <ul class="list-episode">
+                <li class="episode "><a data-id="89132" title="Tập 02" class="btn-episode episode-link btn3d"
+                        href="https://animevietsub.pro/phim/kyokou-suiri-2nd-season-a4485/tap-02-89132.html"
+                        data-play="api" data-movie="" data-source="du"
+                        data-hash="yYIUcEbWNhNTfgVmsy0mGm12d-u_2ogvAIMZCMh3fl1r_NHCHJXR61ygVoISE73CTW7Vv9PMbstqUxWVNWo4l2jUxl0ep1BuL9DQaDhajblZDmSYlWXLKzA8QVfoU4AO">02</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<footer class="footer">
+    <div class="page-up">
+        <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+
+            </div>
+            <div class="col-lg-6">
+                <div class="footer__nav">
+                    <div class="footer__logo">
+                        <a href="index.html"><img src="/img/icon/weblogo.png" alt="" width="100px" height="100px"></a>
+                    </div>
+                    <ul>
+                        <li class="active"><a href="./index.html">Home</a></li>
+                    </ul>
+                    <p>Karyl does not store any files on our server, we only linked to the media which is hosted on
+                        3rd party services.</p>
+                    <p>
+                        © Copyright 2022 Karyl.live All rights reserved.
+                    </p>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/player.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "hls.js": "^1.3.3",
+    "netplayer": "^1.4.11",
+    "video.js": "^8.0.4",
+    "videojs-ass": "^0.8.0"
+  }
+}
