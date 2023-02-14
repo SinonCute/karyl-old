@@ -1308,29 +1308,7 @@ background: linear-gradient(90deg, rgba(77,104,184,1) 17%, rgba(129,129,129,0.34
 	position: relative;
 }
 
-.page-up {
-	position: relative;
-	top: -25px;
-	margin-left: 1280px;
-}
 
-.page-up a {
-	display: inline-block;
-	font-size: 36px;
-	color: #ffffff;
-	height: 50px;
-	width: 50px;
-	background: #3e62a5;
-	line-height: 50px;
-	text-align: center;
-	border-radius: 50%;
-}
-
-.page-up a span {
-	position: relative;
-	top: 2px;
-	left: -1px;
-}
 
 .footer__nav {
 	text-align: center;
@@ -1350,7 +1328,7 @@ background: linear-gradient(90deg, rgba(77,104,184,1) 17%, rgba(129,129,129,0.34
 .footer__nav ul li a {
 	font-size: 15px;
 	box-shadow: #000;
-	color: #181414;
+	color: #ffffff;
 	display: block;
 	font-weight: 700;
 }
