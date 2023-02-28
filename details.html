@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-  
+
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
@@ -23,14 +23,16 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/im-ani-details.js"></script>
 </head>
 
 <body>
 
-    <header class="head">
+    <header class="head" id="ani-cover">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="./index.html">
@@ -68,10 +70,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="">Thư viện</a>
-
                                 </li>
-
-
                             </ul>
                         </nav>
                     </div>
@@ -84,127 +83,99 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./index.html"><i class="fa fa-bookmark"></i> Home</a>
-
-                        <span>Action</span>
+                        <a href="https://karyl.live/"><i class="fa fa-bookmark"></i>Home</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
 
-    <!-- Anime Section Begin -->
     <section class="anime-details spad">
         <div class="container">
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="anime__details__pic set-bg" data-setbg="img/anime/details-pic.jpg">
-
+                        <div class="anime__details__pic set-bg" data-setbg="" id="ani-image">
                         </div>
                     </div>
                     <div class="col-lg-9">
                         <div class="anime__details__text">
                             <div class="anime__details__title">
-                                <h3>Lycoris Recoil</h3>
-                                <span>Jap: リコリス・リコイル, Romaji: Rikorisu Rikoiru</span>
-                                <a href="video.html" class="watch-btn"> <i class="fa fa-play"></i> Xem Phim <i
-                                        class=""></i></a>
+                                <h3 id="anime-title"></h3>
+                                <span></span>
+                                <a href="" class="watch-btn"> <i class="fa fa-play"></i> Xem Phim <i class=""></i></a>
+                                <a href="" class="watch-btn" id="ani-Trailer"> <i class="fa fa-play"></i> Xem Trailer <i class=""></i></a>
                             </div>
-                            <div class="anime__details__rating">
-                                <div class="rating">
-                                    <a><i class="fa fa-star"></i> Rank #335 (Highest Rated Anime)</a>
-                                </div>
-                            </div>
-                            <p>Quán cà phê bất ổn lấy bối cảnh trong những ngày yên bình ở Nhật Bản. Một tổ chức tình
-                                báo bí mật ngăn chặn tội ác được gọi là "DA" trên khắp Nhật Bản, và nhóm đặc vụ toàn nữ
-                                của họ được gọi là "Lycoris", họ là những người đã ám sát những kẻ khủng bố và tội phạm
-                                trước khi chúng có thể trở thành mối đe dọa. Inoue Takina - một đặc vụ Lycoris xuất sắc
-                                đã không tuân theo mệnh lệnh hợp tác với Nishikigi Chiasto - đặc vụ lycoris mạnh nhất
-                                mọi thời đại trong một nhiệm vụ, điều này khiến cô buộc phải rời khỏi DA. Chisato gặp
-                                Takina và giao cho cô một nhiệm vụ mới, gia nhập quán cà phê LycoReco. Sau đó, họ nhận
-                                được yêu cầu giúp đỡ từ Sanohara Saori và giải quyết mọi thứ một cách nhẹ nhàng. Ngày
-                                hôm sau, Takina chính thức trở thành nhân viên phục vụ mới của LycoReco.</p>
+                            <p id="ani-des"></p>
                             <div class="anime__details__widget">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
-                                        <ul>
-                                            <li><span>Format:</span> TV Series</li>
-                                            <li><span>Studios:</span> A-1 Pictures</li>
-                                            <li><span>Phát sóng:</span> 2/7/2022 – 24/9/2022</li>
-                                            <li><span>Status:</span> End</li>
-                                            <li><span>Số tập:</span> 13</li>
-                                            <li><span>Thể loại:</span> Hành động, hài kịch, tâm lý, đời thường</li>
+                                        <ul id="ani-details">
                                         </ul>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-8">
-                    <div class="anime__details__review">
-                        <div class="section-title">
-                            <h5>Characters</h5>
-                        </div>
+        </div>
 
+
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <div class="anime__details__review">
+                    <div class="section-title">
+                        <h5>Characters</h5>
                     </div>
-                    <div class="anime__details__form">
-                        <div class="section-title">
-                            <h5>Bình Luận</h5>
-                        </div>
-                        <form action="#">
-                            <textarea placeholder="Bình Luận Trực Tiếp"></textarea>
-                            <button type="submit"><i class="fa fa-location-arrow"></i> Gửi</button>
-                        </form>
-                    </div>
+
                 </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="anime__details__sidebar">
-                        <div class="section-title">
-                            <h5>Đề xuất</h5>
-                        </div>
+                <div class="anime__details__form">
+                    <div class="section-title">
+                        <h5>Bình Luận</h5>
+                    </div>
+                    <form action="#">
+                        <textarea placeholder="Bình Luận Trực Tiếp"></textarea>
+                        <button type="submit"><i class="fa fa-location-arrow"></i> Gửi</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="anime__details__sidebar">
+                    <div class="section-title">
+                        <h5>Đề xuất</h5>
+                    </div>
 
-                        <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/slider1.webp">
-                            <div class="ep">13 / 13</div>
-                            <div class="view"><i class="fa fa-eye"></i> 83,162</div>
-                            <h5><a href="#">Kokoro Connect!</a></h5>
-                        </div>
+                    <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/slider1.webp">
+                        <div class="ep">13 / 13</div>
+                        <div class="view"><i class="fa fa-eye"></i> 83,162</div>
+                        <h5><a href="#">Kokoro Connect!</a></h5>
+                    </div>
 
-                        <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-2.jpg">
-                            <div class="ep">12 / 12</div>
-                            <div class="view"><i class="fa fa-eye"></i> 523,233</div>
-                            <h5><a href="#">Bokutachi no Remake</a></h5>
-                        </div>
-                        <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-3.jpg">
-                            <div class="ep">12 / 12</div>
-                            <div class="view"><i class="fa fa-eye"></i> 134,232</div>
-                            <h5><a href="#">Kore wa Zombie desuka</a></h5>
-                        </div>
-                        <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-5.jpg">
-                            <div class="ep">12 / 12</div>
-                            <div class="view"><i class="fa fa-eye"></i> 423,786</div>
-                            <h5><a href="#"> Rokudenashi Majutsu Koushi to Akashic Records</a></h5>
-                        </div>
+                    <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-2.jpg">
+                        <div class="ep">12 / 12</div>
+                        <div class="view"><i class="fa fa-eye"></i> 523,233</div>
+                        <h5><a href="#">Bokutachi no Remake</a></h5>
+                    </div>
+                    <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-3.jpg">
+                        <div class="ep">12 / 12</div>
+                        <div class="view"><i class="fa fa-eye"></i> 134,232</div>
+                        <h5><a href="#">Kore wa Zombie desuka</a></h5>
+                    </div>
+                    <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-5.jpg">
+                        <div class="ep">12 / 12</div>
+                        <div class="view"><i class="fa fa-eye"></i> 423,786</div>
+                        <h5><a href="#"> Rokudenashi Majutsu Koushi to Akashic Records</a></h5>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
-
     <footer class="footer">
-        <div class="page-up">
-            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
-        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-
                 </div>
                 <div class="col-lg-6">
                     <div class="footer__nav">
@@ -220,17 +191,15 @@
                         <p>
                             © Copyright 2022 Karyl.live All rights reserved.
                         </p>
-
-
                     </div>
                 </div>
 
             </div>
         </div>
     </footer>
-   
 
-   
+
+
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch"><i class="icon_close"></i></div>
@@ -239,9 +208,9 @@
             </form>
         </div>
     </div>
-    
 
-   
+
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/player.js"></script>

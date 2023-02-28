@@ -233,7 +233,6 @@ ol {
 
 .head {
 	background: #bdbdbd;
-	background-image: url('/image/bannerjdp.webp');
 	height: 250px;
 	background-attachment: fixed;
 	background-size: 100% 50%;
@@ -1256,7 +1255,7 @@ background: linear-gradient(90deg, rgba(77,104,184,1) 17%, rgba(129,129,129,0.34
 	color: #3e62a5;
 }
 
-.breadcrumb__links a:after {
+.breadcrumb__links a u{
 	position: absolute;
 	right: -14px;
 	top: 0;
