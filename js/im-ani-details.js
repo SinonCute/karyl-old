@@ -2,8 +2,6 @@ $(document).ready(function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const id = urlParams.get('id');
-    const newUrl = `/details/${id}`;
-    window.history.pushState({ path: newUrl }, "", newUrl);
     console.log(id)
 
     //data
