@@ -59,5 +59,11 @@ $(document).ready(function () {
         bgElementcover.style.backgroundImage = `url("${aniCover}")`
     })
 
+    // kiểm tra xem id có tồn tại hay không
+    if (!id) {
+        // nếu không có, chuyển hướng người dùng đến trang khác
+        window.location.href = 'https://karyl.live';
+    }
+
 })
 
