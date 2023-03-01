@@ -2,6 +2,8 @@ $(document).ready(function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const id = urlParams.get('id');
+    const newUrl = `/details/${id}`;
+    window.history.pushState({ path: newUrl }, "", newUrl);
     console.log(id)
 
     //data
@@ -22,9 +24,14 @@ $(document).ready(function () {
         //status
         var aniStatus = anime.status
         //trailer link
-        var aniTrailer = anime.trailer.id
-        //url
-        var url = "https://www.youtube.com/watch?v="
+        if (anime.trailer) {
+            var aniTrailer = anime.trailer.id
+            var url = "https://www.youtube.com/watch?v="
+            trailerHtml = `<a href="" class="watch-btn" id="ani-Trailer">` + `<i class="fa fa-play">` + `</i>` + `Xem Trailer` + `<i class="">` + `</i>` + `</a>`
+            document.getElementById("ani-cata").innerHTML = trailerHtml
+            var link = document.getElementById("ani-Trailer")
+            link.href = url + aniTrailer
+        }
         //type
         var aniType = anime.type
         //total ep
@@ -33,7 +40,7 @@ $(document).ready(function () {
         var aniCurrEp = anime.currentEpisode
         //des
         var aniDes = anime.description
-        
+
         var genresHtml = "";
         //background-cover
         var aniCover = anime.cover
@@ -49,8 +56,6 @@ $(document).ready(function () {
         }
         document.getElementById("ani-details").innerHTML = genresHtml.join('');
         document.getElementById("ani-des").innerHTML = aniDes
-        var link = document.getElementById("ani-Trailer")
-        link.href = url + aniTrailer
         bgImage.style.backgroundImage = `url("${aniImage}")`
         bgElementcover.style.backgroundImage = `url("${aniCover}")`
     })
@@ -58,7 +63,7 @@ $(document).ready(function () {
     // kiểm tra xem id có tồn tại hay không
     if (!id) {
         // nếu không có, chuyển hướng người dùng đến trang khác
-        window.location.href = 'https://karyl.live';
+        window.location.href = '/';
     }
 
 })

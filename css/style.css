@@ -239,6 +239,18 @@ ol {
 	background-repeat: no-repeat;
 	transition: background 0.8s ease 0s, top 0.5s ease 0s;
 }
+.head .ani-lg-1{
+	opacity: 0.7;
+	background-color: #000000;
+	z-index: 1;
+	position: relative;
+
+}
+.ani-lg-1 img{
+	opacity: 1;
+	z-index: 999;
+	position: relative;
+}
 
 .site-search__input {
 	border-radius: 3px;
@@ -265,6 +277,7 @@ ol {
 .header__logo {
 	padding: 20px 0 17px;
 }
+
 
 .header__logo a {
 	display: inline-block;
