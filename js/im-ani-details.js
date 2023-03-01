@@ -33,11 +33,7 @@ $(document).ready(function () {
         var aniCurrEp = anime.currentEpisode
         //des
         var aniDes = anime.description
-        //enddate
-        var aniEndDate = anime.endDate.day
-        var aniEndMonth = anime.endDate.month
-        var aniEndYear = anime.endDate.year
-
+        
         var genresHtml = "";
         //background-cover
         var aniCover = anime.cover
@@ -49,7 +45,7 @@ $(document).ready(function () {
 
 
         for (var i = 0; i < genresList.length; i++) {
-            genresHtml = ["<li>" + "Tập: " + aniCurrEp + "/" + aniTotalEp + "</li>", "<li>" + "Format: " + aniType + "</li>", "<li>" + "Tình trạng: " + aniStatus + "</li>", "<li>" + "Phát sóng: " + aniStartDate + "/" + aniStartMonth + "/" + aniStartYear + "</li>", "<li>" + "End vào: " + aniEndDate + "/" + aniEndMonth + "/" + aniEndYear + "</li>", "<li>" + "Studios: " + aniStudio + "</li>", "<li>" + "Thể loại: " + genresList + "</li>"]
+            genresHtml = ["<li>" + "Tập: " + aniCurrEp + "/" + aniTotalEp + "</li>", "<li>" + "Format: " + aniType + "</li>", "<li>" + "Tình trạng: " + aniStatus + "</li>", "<li>" + "Phát sóng: " + aniStartDate + "/" + aniStartMonth + "/" + aniStartYear + "</li>", "<li>" + "Studios: " + aniStudio + "</li>", "<li>" + "Thể loại: " + genresList + "</li>"]
         }
         document.getElementById("ani-details").innerHTML = genresHtml.join('');
         document.getElementById("ani-des").innerHTML = aniDes
