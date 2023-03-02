@@ -36,9 +36,9 @@
                 <div class="row" style="opacity: 1;">
                     <div class="col-lg-2" style="opacity: 1;">
                         <div class="header__logo" style="opacity: 1;">
-                                <a href="/">
-                                    <img src="/img/icon/weblogo.png" alt="" width="50px" height="50px">
-                                </a>
+                            <a href="/">
+                                <img src="/img/icon/weblogo.png" alt="" width="50px" height="50px">
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-8">
@@ -46,30 +46,9 @@
                             <nav class="header__menu mobile-menu">
                                 <ul>
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="">Dạng Anime <span class="arrow_carrot-down"></span></a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">TV/Series</a></li>
-                                            <li><a href="#">Movie/Ova</a></li>
-                                            <li><a href="#">Sắp chiếu</a></li>
-                                            <li><a href="#">Đang chiếu</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Top Anime <span class="arrow_carrot-down"></span></a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Theo Ngày</a></li>
-                                            <li><a href="#">Theo Mùa</a></li>
-                                            <li><a href="#">Theo Năm</a></li>
-                                            <li><a href="#">Yêu Thích</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Season <span class="arrow_carrot-down"></span></a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Mùa Xuân</a></li>
-                                            <li><a href="#">Mùa Hạ</a></li>
-                                            <li><a href="#">Mùa Thu</a></li>
-                                            <li><a href="#">Mùa Đông</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="">Dạng Anime</a></li>
+                                    <li><a href="">Top Anime</a></li>
+                                    <li><a href="">Season</a>
                                     <li><a href="">Thư viện</a>
                                     </li>
                                 </ul>
@@ -80,20 +59,7 @@
                 </div>
             </div>
         </div>
-
     </header>
-    <div class="breadcrumb-option">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb__links">
-                        <a href="/"><i class="fa fa-bookmark"></i>Home</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section class="anime-details spad">
         <div class="container">
             <div class="anime__details__content">
@@ -105,7 +71,7 @@
                     <div class="col-lg-9">
                         <div class="anime__details__text">
                             <div class="anime__details__title">
-                                <h3 id="anime-title"></h3>
+                                <h3 id="ani-title"></h3>
                                 <div id="ani-cata">
                                 </div>
                             </div>
@@ -123,56 +89,34 @@
                 </div>
             </div>
         </div>
-
-
         <div class="row">
             <div class="col-lg-8 col-md-8">
                 <div class="anime__details__review">
                     <div class="section-title">
                         <h5>Characters</h5>
                     </div>
-
-                </div>
-                <div class="anime__details__form">
-                    <div class="section-title">
-                        <h5>Bình Luận</h5>
-                    </div>
-                    <form action="#">
-                        <textarea placeholder="Bình Luận Trực Tiếp"></textarea>
-                        <button type="submit"><i class="fa fa-location-arrow"></i> Gửi</button>
-                    </form>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-8 col-md-8">
                 <div class="anime__details__sidebar">
                     <div class="section-title">
                         <h5>Đề xuất</h5>
                     </div>
-
-                    <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/slider1.webp">
-                        <div class="ep">13 / 13</div>
-                        <div class="view"><i class="fa fa-eye"></i> 83,162</div>
-                        <h5><a href="#">Kokoro Connect!</a></h5>
-                    </div>
-
-                    <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-2.jpg">
-                        <div class="ep">12 / 12</div>
-                        <div class="view"><i class="fa fa-eye"></i> 523,233</div>
-                        <h5><a href="#">Bokutachi no Remake</a></h5>
-                    </div>
-                    <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-3.jpg">
-                        <div class="ep">12 / 12</div>
-                        <div class="view"><i class="fa fa-eye"></i> 134,232</div>
-                        <h5><a href="#">Kore wa Zombie desuka</a></h5>
-                    </div>
-                    <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-5.jpg">
-                        <div class="ep">12 / 12</div>
-                        <div class="view"><i class="fa fa-eye"></i> 423,786</div>
-                        <h5><a href="#"> Rokudenashi Majutsu Koushi to Akashic Records</a></h5>
+                    <div class="row" id="anime-list">
+                        <div class="col-lg-4 col-md-6 col-sm-6" id="anime-item">
+                            <div class="product__item">
+                                <a href="" id="ani-href">
+                                    <div class="product__item__pic set-bg" id="anime-bg">
+                                    </div>
+                                </a>
+                                <div class="product__item__text">
+                                    <h5><a href="" id="anime-title"></a></h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <footer class="footer">
@@ -183,8 +127,7 @@
                 <div class="col-lg-6">
                     <div class="footer__nav">
                         <div class="footer__logo">
-                            <a href="/"><img src="/img/icon/weblogo.png" alt="" width="100px"
-                                    height="100px"></a>
+                            <a href="/"><img src="/img/icon/weblogo.png" alt="" width="100px" height="100px"></a>
                         </div>
                         <ul>
                             <li class="active"><a href="/">Home</a></li>
@@ -200,19 +143,6 @@
             </div>
         </div>
     </footer>
-
-
-
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch"><i class="icon_close"></i></div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
-        </div>
-    </div>
-
-
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

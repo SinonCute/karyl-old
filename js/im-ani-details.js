@@ -2,6 +2,7 @@ $(document).ready(function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const id = urlParams.get('id');
+    const animeItem = $("#anime-item").clone();
     console.log(id)
 
     //data
@@ -10,7 +11,7 @@ $(document).ready(function () {
         const anime = response.data;
         console.log(anime)
         //title
-        document.getElementById("anime-title").innerHTML = anime.title.romaji
+        document.getElementById("ani-title").innerHTML = anime.title.romaji
         //genres
         var genresList = anime.genres.join(", ")
         //studio
@@ -47,8 +48,6 @@ $(document).ready(function () {
         var aniImage = anime.image
         var bgImage = document.getElementById("ani-image")
 
-
-
         for (var i = 0; i < genresList.length; i++) {
             genresHtml = ["<li>" + "Tập: " + aniCurrEp + "/" + aniTotalEp + "</li>", "<li>" + "Format: " + aniType + "</li>", "<li>" + "Tình trạng: " + aniStatus + "</li>", "<li>" + "Phát sóng: " + aniStartDate + "/" + aniStartMonth + "/" + aniStartYear + "</li>", "<li>" + "Studios: " + aniStudio + "</li>", "<li>" + "Thể loại: " + genresList + "</li>"]
         }
@@ -56,6 +55,31 @@ $(document).ready(function () {
         document.getElementById("ani-des").innerHTML = aniDes
         bgImage.style.backgroundImage = `url("${aniImage}")`
         bgElementcover.style.backgroundImage = `url("${aniCover}")`
+
+        for (var a = 0; a < 10; a++) {
+            var aniRe = anime.recommendations[a]
+            var aniReImage = aniRe.image
+            var aniReId = aniRe.id
+            var aniTitle = aniRe.title.romaji
+
+
+            var clonedAnimeItem = animeItem.clone();
+            clonedAnimeItem.find("#anime-bg").css("background-image", "url(" + aniReImage + ")");
+            var title = aniTitle
+            var maxLength = 30;
+            var trimmedTitle = title.length > maxLength ? title.slice(0, maxLength) + "..." : title;
+            $("#anime-title").text(trimmedTitle);
+            $("#anime-bg").css("background-image", "url(" + aniReImage + ")");
+            var link = document.getElementById("anime-title")
+                link.href = "details.html?id=" + aniReId
+
+                var bgHref = document.getElementById("ani-href")
+                bgHref.href = "details.html?id=" + aniReId
+            clonedAnimeItem.find("#anime-title").text(trimmedTitle)
+            clonedAnimeItem.find("a").attr("href", "details.html?id=" + aniReId);
+            $("#anime-list").append(clonedAnimeItem);
+
+        }
     })
 
     // kiểm tra xem id có tồn tại hay không
