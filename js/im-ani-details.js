@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var currentIndex = 0;
+    $.fx.off = false;
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const id = urlParams.get('id');
@@ -71,16 +73,48 @@ $(document).ready(function () {
             $("#anime-title").text(trimmedTitle);
             $("#anime-bg").css("background-image", "url(" + aniReImage + ")");
             var link = document.getElementById("anime-title")
-                link.href = "details.html?id=" + aniReId
+            link.href = "details.html?id=" + aniReId
 
-                var bgHref = document.getElementById("ani-href")
-                bgHref.href = "details.html?id=" + aniReId
+            var bgHref = document.getElementById("ani-href")
+            bgHref.href = "details.html?id=" + aniReId
             clonedAnimeItem.find("#anime-title").text(trimmedTitle)
             clonedAnimeItem.find("a").attr("href", "details.html?id=" + aniReId);
             $("#anime-list").append(clonedAnimeItem);
 
         }
     })
+    $("#prev-btn").click(function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateButtons();
+            $("#anime-list").stop(true).animate({
+                left: `${currentIndex * -100}%`
+            }, 500);
+        }
+    });
+    $("#next-btn").click(function () {
+        let currentTime = new Date().getTime();
+        if (currentIndex < 3) {
+            currentIndex++;
+            updateButtons();
+            $("#anime-list").stop(true).animate({
+                left: `${currentIndex * -100}%`
+            }, 500);
+        } else {
+            currentIndex = 0;
+            updateButtons();
+            $("#anime-list").stop(true).animate({
+                left: 0
+            }, 500);
+        }
+    });
+
+    function updateButtons() {
+        $("#prev-btn").prop("disabled", currentIndex === 0);
+        $("#next-btn").prop("disabled", currentIndex === 3);
+        $("#anime-list").animate({ left: `${-currentIndex * 100}%` }, 500);
+
+    }
 
     // kiểm tra xem id có tồn tại hay không
     if (!id) {

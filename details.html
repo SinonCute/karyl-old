@@ -29,36 +29,41 @@
 </head>
 
 <body>
-
-    <header class="head" id="ani-cover">
-        <div class="ani-lg-1">
-            <div class="container" style="opacity: 1;">
-                <div class="row" style="opacity: 1;">
-                    <div class="col-lg-2" style="opacity: 1;">
-                        <div class="header__logo" style="opacity: 1;">
-                            <a href="/">
-                                <img src="/img/icon/weblogo.png" alt="" width="50px" height="50px">
-                            </a>
-                        </div>
+    <header class="header">
+        <header class="head" id="ani-cover">
+            <div class="ani-lg-1">
+                <div class="container">
+                    <div class="col-lg-2">
                     </div>
-                    <div class="col-lg-8">
-                        <div class="header__nav">
-                            <nav class="header__menu mobile-menu">
-                                <ul>
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="">Dạng Anime</a></li>
-                                    <li><a href="">Top Anime</a></li>
-                                    <li><a href="">Season</a>
-                                    <li><a href="">Thư viện</a>
-                                    </li>
-                                </ul>
-                            </nav>
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="header__logo">
+                                <a href="/">
+                                    <img src="/img/icon/weblogo.png" alt="" width="50px" height="50px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="header__nav">
+                                <nav class="header__menu mobile-menu">
+                                    <ul>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="">Dạng Anime</a></li>
+                                        <li><a href="">Top Anime</a></li>
+                                        <li><a href="">Season</a></li>
+                                        <li><a href="">Thư viện</a>
+                                        </li>
+                                        <li><button class="search-button" id="searchsubmit" type="submit"><i
+                                                    class="icon_search"></a></i></button></li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                     <div id="mobile-menu-wrap"></div>
                 </div>
             </div>
-        </div>
+        </header>
     </header>
     <section class="anime-details spad">
         <div class="container">
@@ -102,7 +107,11 @@
                     <div class="section-title">
                         <h5>Đề xuất</h5>
                     </div>
-                    <div class="row" id="anime-list">
+                    <div class="ani-btn">
+                        <button id="prev-btn" class="fa fa-angle-left"></button>
+                        <button id="next-btn" class="	fa fa-angle-right"></button>
+                      </div>
+                    <div class="ani-slide" id="anime-list">
                         <div class="col-lg-4 col-md-6 col-sm-6" id="anime-item">
                             <div class="product__item">
                                 <a href="" id="ani-href">
@@ -132,8 +141,7 @@
                         <ul>
                             <li class="active"><a href="/">Home</a></li>
                         </ul>
-                        <p>Karyl does not store any files on our server, we only linked to the media which is hosted on
-                            3rd party services.</p>
+                        <p></p>
                         <p>
                             © Copyright 2022 Karyl.live All rights reserved.
                         </p>
