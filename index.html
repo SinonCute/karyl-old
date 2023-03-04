@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Xem anime vietsub hay tại Karyl.live, không giới hạn lượt xem, không quảng cáo.">
@@ -15,7 +16,7 @@
   <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/im-ani-sc.js"></script>
-
+  <script src="js/im-ani-sc-pop.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
@@ -51,13 +52,12 @@
             <nav class="header__menu mobile-menu">
               <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="">Dạng Anime</a></li>
+                <li><a href="">Thể Loại</a></li>
                 <li><a href="">Top Anime</a></li>
                 <li><a href="">Season</a></li>
                 <li><a href="#">Thư viện</a>
                 </li>
-                <li><button class="search-button" id="searchsubmit" type="submit"><i
-                      class="icon_search"></a></i></button></li>
+                <li><a href="/search.html"><i class="icon_search"></i></a></li>
               </ul>
             </nav>
           </div>
@@ -212,6 +212,38 @@
                 </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-lg-8">
+        <div class="popular__product">
+          <div class="ani-slide">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="section-title">
+                <h4>Phổ Biến</h4>
+              </div>
+            </div>
+          </div>
+          <div class="ani-btn-pop">
+            <button id="prev-btn-pop" class="fa fa-angle-left"></button>
+            <button id="next-btn-pop" class="	fa fa-angle-right"></button>
+          </div>
+          <div class="ani-slide" id="anime-list-pop">
+            <div class="col-lg-4 col-md-6 col-sm-6" id="anime-item-pop">
+              <div class="product__item">
+                <a href="" id="ani-href-pop">
+                  <div class="product__item__pic set-bg" id="anime-bg-pop">
+                  </div>
+                </a>
+                <div class="product__item__text">
+                  <ul class="anime-genres-pop" id="anime-genres-pop">
+                  </ul>
+                  <h5><a href="" id="anime-title-pop"></a></h5>
+                </div>
+              </div>
             </div>
           </div>
         </div>
