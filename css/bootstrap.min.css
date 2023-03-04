@@ -662,6 +662,15 @@ pre code {
     margin-left: -15px
 }
 
+.wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
 .ani-slide {
     display: -ms-flexbox;
     display: flex;
@@ -669,6 +678,7 @@ pre code {
     flex-wrap: nowrap;
     justify-content: left;
     position: relative;
+
 }
 
 

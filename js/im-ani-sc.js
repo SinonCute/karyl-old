@@ -1,10 +1,11 @@
 $(document).ready(function () {
+    
     $.fx.off = false;
     var animeItem = $("#anime-item").clone();
     var currentIndex = 0;
-    const url = "https://api.consumet.org/meta/anilist/trending?page=1&perPage=51";
+    const urlTrend = "https://api.consumet.org/meta/anilist/trending?page=1&perPage=51";
     const getData = () => {
-        axios.get(url).then(response => {
+        axios.get(urlTrend).then(response => {
             for (var i = 0; i < response.data.results.length; i++) {
                 var clonedAnimeItem = animeItem.clone();
                 var bgElement = document.getElementById("anime-bg")
@@ -89,6 +90,7 @@ $(document).ready(function () {
         $("#anime-list").animate({ left: `${-currentIndex * 100}%` }, 500);
 
     }
+    
 });
 
 
