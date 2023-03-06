@@ -8,7 +8,7 @@ $(document).ready(function () {
     console.log(id)
 
     //data
-    const url = `https://api.consumet.org/meta/anilist/info/${id}`;
+    const url = `https://api.karyl.live/consumet/meta/anilist/info/${id}`;
     axios.get(url).then(response => {
         const anime = response.data;
         console.log(anime)
