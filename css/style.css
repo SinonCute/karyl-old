@@ -250,7 +250,6 @@ input[type="search"] {
 	border: 2px solid #d1cece;
 }
 
-
 .input-container input {
 	border: none;
 	outline: none;
@@ -1570,6 +1569,7 @@ input[type="search"] {
 	.signup .login__social__links {
 		padding-left: 0;
 	}
+	
 }
 
 /* Wide Mobile = 480px */

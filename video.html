@@ -21,6 +21,10 @@
     <link href="bower_components/libjass/libjass.css" rel="stylesheet">
     <script src="bower_components/videojs/dist/video.min.js"></script>
     <script src="bower_components/libjass/libjass.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/im-ani-src-video.js"></script>
+
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
@@ -39,11 +43,12 @@
 <body>
     <header class="header">
         <div class="container">
+            <div class="col-lg-2">
+            </div>
             <div class="row">
-
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html">
+                        <a href="/">
                             <img src="/img/icon/weblogo.png" alt="" width="50px" height="50px">
                         </a>
                     </div>
@@ -52,42 +57,15 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li><a href="./index.html">Home</a></li>
-                                <li><a href="">Dạng Anime <span class="arrow_carrot-down"></span></a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">TV/Series</a></li>
-                                        <li><a href="#">Movie/Ova</a></li>
-                                        <li><a href="#">Sắp chiếu</a></li>
-                                        <li><a href="#">Đang chiếu</a></li>
-                                    </ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="">Thể Loại</a></li>
+                                <li><a href="">Top Anime</a></li>
+                                <li><a href="">Season</a></li>
+                                <li><a href="#">Thư viện</a>
                                 </li>
-                                <li><a href="">Top Anime <span class="arrow_carrot-down"></span></a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Theo Ngày</a></li>
-                                        <li><a href="#">Theo Mùa</a></li>
-                                        <li><a href="#">Theo Năm</a></li>
-                                        <li><a href="#">Yêu Thích</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Season <span class="arrow_carrot-down"></span></a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Mùa Xuân</a></li>
-                                        <li><a href="#">Mùa Hạ</a></li>
-                                        <li><a href="#">Mùa Thu</a></li>
-                                        <li><a href="#">Mùa Đông</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Thư viện</a>
-                                </li>                          
+                                <li><a href="/search.html"><i class="icon_search"></i></a></li>
                             </ul>
                         </nav>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="header__right">
-                        <input autocomplete="off" id="search" class="site-search__input" type="text">
-                        <button class="search-button" id="searchsubmit" type="submit"><i
-                                class="fa fa-search"></i></button>
                     </div>
                 </div>
             </div>
@@ -104,7 +82,7 @@
                     </video>
                     <script>
                         var video = document.getElementById('player');
-                        var videoSrc = 'https://api.karyl.live/v1/proxy/stream?id=1015468037740183574/1074924974533509171/output1.m3u8';
+                        var videoSrc = '';
                         if (Hls.isSupported()) {
                             var hls = new Hls();
                             hls.loadSource(videoSrc);
@@ -115,7 +93,7 @@
                         }
                     </script>
                     <script>
-                        videojs('playe', {
+                        videojs('player', {
                             controls: true,
                             nativeControlsForTouch: true,
                             width: 1280,
@@ -140,7 +118,7 @@
                 <li class="episode "><a data-id="89132" title="Tập 02" class="btn-episode episode-link btn3d"
                         href="https://animevietsub.pro/phim/kyokou-suiri-2nd-season-a4485/tap-02-89132.html"
                         data-play="api" data-movie="" data-source="du"
-                        data-hash="https://api.karyl.live/v1/proxy/stream?id=1015468037740183574/1074934319946145793/violet_movie.m3u8">02</a>
+                        data-hash="https://api.karyl.live/v1/proxy/stream?id=1015468037740183574/1074934319946145793/violet_movie.m3u8"></a>
                 </li>
             </ul>
         </div>
@@ -148,9 +126,6 @@
 </body>
 
 <footer class="footer">
-    <div class="page-up">
-        <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
@@ -164,13 +139,12 @@
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
                     </ul>
-                    <p>Karyl does not store any files on our server, we only linked to the media which is hosted on
-                        3rd party services.</p>
                     <p>
-                      
+
                     </p>
+                    <p>
 
-
+                    </p>
                 </div>
             </div>
 

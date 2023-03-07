@@ -15,7 +15,7 @@
     <title>Trang chủ (Home) - Karyl</title>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="js/im-ani-search.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
@@ -65,18 +65,22 @@
         </div>
     </header>
     <section class="search spad">
-        <div class="search_h4">
-            <h4>Tìm Kiếm</h4>
-        </div>
-        <div class="input-container" >
-            <div class="search_box">
-                <input type="search">
+        <div class="container">
+            <div class="search_h4">
+                <h4>Tìm Kiếm</h4>
+            </div>
+            <div class="input-container">
+                <div class="search_box">
+                    <input type="search" id="searchInput">
+                </div>
             </div>
         </div>
     </section>
     <section class="product spad">
         <div class="container">
-           <div class="wrap"></div>
+            <div id="searchResults" class="row">
+
+            </div>
         </div>
     </section>
     <footer class="footer">
@@ -92,9 +96,11 @@
                         <ul>
                             <li class="active"><a href="/">Home</a></li>
                         </ul>
-                        <p></p>
                         <p>
-                          
+
+                        </p>
+                        <p>
+
                         </p>
                     </div>
                 </div>
