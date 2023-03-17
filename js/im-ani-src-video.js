@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var urlGetToken = "https://api.karyl.live/v1/get_token"
     axios.get(urlGetToken).then(token => {
+        console.log(token)
         var data = JSON.stringify({
             query: `query {
     sourceById(id: "e676e5b9-4073-45e1-8e6b-12d265a5874e") {
@@ -17,7 +18,7 @@ $(document).ready(function () {
             maxBodyLength: Infinity,
             url: 'https://api.karyl.live/graphql',
             headers: {
-                'Authorization': `Bearer ${token}`,
+                'Authorization': `Bearer ${token.data}`,
                 'Content-Type': 'application/json'
             },
             data: data

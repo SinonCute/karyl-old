@@ -77,12 +77,12 @@
     <section class="anime-details spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+              
                     <video id="player" class="video-js vjs-default-skin vjs-big-play-centered">
                     </video>
                     <script>
                         var video = document.getElementById('player');
-                        var videoSrc = '';
+                        var videoSrc = 'https://api.karyl.live/v1/server/request?id=3a5f820c-f8d3-42ee-be6e-442ef85a44b2&token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjc4MTY5MTc5LCJleHAiOjE2NzgxNzA5Nzl9.qVTpBXyv3agxbGWoQNR5YzI0BVXaZd_OcTD3swuD9cw';
                         if (Hls.isSupported()) {
                             var hls = new Hls();
                             hls.loadSource(videoSrc);
@@ -109,20 +109,9 @@
                         });
 
                     </script>
-                </div>
+            
             </div>
     </section>
-    <div>
-        <div>
-            <ul class="list-episode">
-                <li class="episode "><a data-id="89132" title="Tập 02" class="btn-episode episode-link btn3d"
-                        href="https://animevietsub.pro/phim/kyokou-suiri-2nd-season-a4485/tap-02-89132.html"
-                        data-play="api" data-movie="" data-source="du"
-                        data-hash="https://api.karyl.live/v1/proxy/stream?id=1015468037740183574/1074934319946145793/violet_movie.m3u8"></a>
-                </li>
-            </ul>
-        </div>
-    </div>
 </body>
 
 <footer class="footer">

@@ -12,6 +12,34 @@ $(document).ready(function () {
     axios.get(url).then(response => {
         const anime = response.data;
         console.log(anime)
+        //characters
+        var html = '';
+        for (var z = 0; z < 6; z++) {
+            var aniCharacter = anime.characters[z];
+            html += `
+                <div class="grid-wrap characters">
+                    <div class="grid-item">
+                        <div class="grid-item-image">
+                            <img src="${aniCharacter.image}" alt="Character Image">
+                        </div>
+                        <div class="grid-item-title">
+                            <h6>${aniCharacter.name.full}</h6>
+                            <h7>${aniCharacter.role}
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-image">
+                            <img src="${aniCharacter.voiceActors[0].image}" alt="Character Image">
+                        </div>
+                        <div class="grid-item-title">
+                            <h6>${aniCharacter.voiceActors[0].name.full}</h6>
+                            <h7>${aniCharacter.voiceActors[0].language}</h7>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        $('#characters').html(html);
         //title
         document.getElementById("ani-title").innerHTML = anime.title.romaji
         //genres
