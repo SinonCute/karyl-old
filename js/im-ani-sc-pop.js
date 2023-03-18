@@ -69,7 +69,7 @@ $(document).ready(function () {
     });
     $("#next-btn-pop").click(function () {
         let currentTime = new Date().getTime();
-        if (currentIndex < 16) {
+        if (currentIndex < 14) {
             currentIndex++;
             updateButtons();
             $("#anime-list-pop").stop(true).animate({

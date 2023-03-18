@@ -29,10 +29,11 @@ h5,
 h6 {
 	margin: 0;
 	color: #ffffff;
-	font-weight: 400;
-	font-family: "Mulish", sans-serif;
+	font-weight: 600;
+	font-family: "Roboto", sans-serif;
 }
-h7{
+
+h7 {
 	margin: 0;
 	color: #ffffff;
 	font-weight: 200;
@@ -261,38 +262,43 @@ input[type="search"] {
 	outline: none;
 	width: 100%;
 }
-.characters{
+
+.characters {
 	margin-top: 10px;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
 }
 
 .grid-wrap {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 10 -10px;
-	background-color: #050505;
-  }
-  
-  .grid-item {
+	background-color: #0f0f0f;
+	width: 49%;
+}
+
+.grid-item {
 	width: calc(25% - 20px);
 	margin: 0 10px 20px;
 	text-align: center;
-  }
-  
-  .grid-item-image {
+}
+
+.grid-item-image {
 	margin-bottom: 10px;
-	
-  }
-  
-  .grid-item-image img {
+	margin-top: 10px;
+}
+
+.grid-item-image img {
 	max-width: 100%;
-	height: 100px;
-  }
-  
-  .grid-item-title {
+	height: 120px;
+}
+
+.grid-item-title {
 	font-size: 16px;
 	line-height: 1.2;
-  }
+}
+
 .spacial-controls {
 	position: fixed;
 	width: 111px;

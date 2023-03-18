@@ -14,9 +14,28 @@ $(document).ready(function () {
         console.log(anime)
         //characters
         var html = '';
-        for (var z = 0; z < 6; z++) {
+
+        for (var z = 0; z < anime.characters.length - 1; z++) {
             var aniCharacter = anime.characters[z];
-            html += `
+            if (aniCharacter.voiceActors.length == 0) {
+                html += `
+            <div class="grid-wrap characters">
+                <div class="grid-item">
+                    <div class="grid-item-image">
+                        <img src="${aniCharacter.image}" alt="Character Image">
+                    </div>
+                    <div class="grid-item-title">
+                        <h6>${aniCharacter.name.full}</h6>
+                        <h7>${aniCharacter.role}
+                    </div>
+                </div>
+            </div>
+        `;
+
+                $('#characters').html(html);
+            } else {
+
+                html += `
                 <div class="grid-wrap characters">
                     <div class="grid-item">
                         <div class="grid-item-image">
@@ -38,8 +57,10 @@ $(document).ready(function () {
                     </div>
                 </div>
             `;
+
+                $('#characters').html(html);
+            }
         }
-        $('#characters').html(html);
         //title
         document.getElementById("ani-title").innerHTML = anime.title.romaji
         //genres
@@ -86,7 +107,7 @@ $(document).ready(function () {
         bgImage.style.backgroundImage = `url("${aniImage}")`
         bgElementcover.style.backgroundImage = `url("${aniCover}")`
 
-        for (var a = 0; a < 10; a++) {
+        for (var a = 0; a < anime.recommendations.length - 1; a++) {
             var aniRe = anime.recommendations[a]
             var aniReImage = aniRe.image
             var aniReId = aniRe.id
@@ -122,7 +143,7 @@ $(document).ready(function () {
     });
     $("#next-btn").click(function () {
         let currentTime = new Date().getTime();
-        if (currentIndex < 3) {
+        if (currentIndex < 4) {
             currentIndex++;
             updateButtons();
             $("#anime-list").stop(true).animate({
@@ -139,7 +160,7 @@ $(document).ready(function () {
 
     function updateButtons() {
         $("#prev-btn").prop("disabled", currentIndex === 0);
-        $("#next-btn").prop("disabled", currentIndex === 3);
+        $("#next-btn").prop("disabled", currentIndex === 5);
         $("#anime-list").animate({ left: `${-currentIndex * 100}%` }, 500);
 
     }
@@ -150,5 +171,4 @@ $(document).ready(function () {
         window.location.href = '/';
     }
 
-})
-
+})  
