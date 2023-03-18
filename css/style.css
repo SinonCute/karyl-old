@@ -308,6 +308,60 @@ input[type="search"] {
 	z-index: 999;
 }
 
+.back {
+	color: white;
+	font-size: 100px;
+	opacity: 0.5;
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+.flex-container-eps {
+	display: flex;
+	flex-wrap: wrap;
+	color: rgb(255, 255, 255);
+}
+
+.flex-container-eps>a:hover {
+	opacity: 1;
+	background-color: #84aec7;
+	color: #202020;
+}
+
+.flex-container-eps>a {
+	background-color: #000000;
+	width: 50px;
+	margin: 10px;
+	text-align: center;
+	font-size: 25px;
+	opacity: 0.5;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	transition: 0.4s;
+	border-radius: 5px;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.flex-box-container-eps {
+	margin-top: 50px;
+	background-color: #0f0f0f;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.flex-box-container-eps>h5 {
+	color: #837f7f;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	padding-left: 15px;
+
+}
+.ani-cata{
+	display: flex;
+}
+.ani-cata a{
+	width: 150px;
+}
 .spacial-controls .search-switch {
 
 	display: block;

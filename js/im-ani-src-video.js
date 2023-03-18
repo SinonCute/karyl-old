@@ -17,7 +17,6 @@ $(document).ready(function () {
                 query: `query {
                     episode(id: "${id}") {
                   animeId
-                  slug
                   episodeNumber
                   sources {
                       id

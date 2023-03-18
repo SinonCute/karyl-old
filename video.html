@@ -75,42 +75,62 @@
 
 
     <section class="anime-details spad">
+        <div class="back" alt="Button to go back last page">
+            <i class="fa fa-long-arrow-left" onclick="window.history.back()"></i>
+        </div>
         <div class="container">
             <div class="row">
-              
-                    <video id="player" class="video-js vjs-default-skin vjs-big-play-centered">
-                    </video>
-                    <script>
-                        var video = document.getElementById('player');
-                        var videoSrc = 'https://proxy-vn.karyl.live/v1/server/request?id=20e4800d-cba6-43de-b861-cb25a35a9bc4&token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjc4NjY5NjU3LCJleHAiOjE2Nzg2NzE0NTd9.y7b7Zw4eGPP-0DleCKw_7mTlG52GsgoBYnF6-7bsFiAQ_XiZpWUioAGo32YCQYypQmgjLxVGnzysC1v-5IOvpg&loc=vn';
-                        if (Hls.isSupported()) {
-                            var hls = new Hls();
-                            hls.loadSource(videoSrc);
-                            hls.attachMedia(video);
-                        }
-                        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                            video.src = videoSrc;
-                        }
-                    </script>
-                    <script>
-                        videojs('player', {
-                            controls: true,
-                            nativeControlsForTouch: true,
-                            width: 1280,
-                            height: 640,
-                            playbackRates: [0.5, 1, 1.5, 2]
-                        });
-                        var vjs = videojs('player');
-                        var vjs_ass = vjs.ass({
-                            'src': ["subs/os.ass"],
-                            label: "vietsub",
-                            videoWidth: 640,
-                            videoHeight: 360,
-                        });
 
-                    </script>
-            
+                <video id="player" class="video-js vjs-default-skin vjs-big-play-centered">
+                </video>
+                <script>
+                    var video = document.getElementById('player');
+                    var videoSrc = 'https://proxy-vn.karyl.live/v1/server/request?id=20e4800d-cba6-43de-b861-cb25a35a9bc4&token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjc4NjY5NjU3LCJleHAiOjE2Nzg2NzE0NTd9.y7b7Zw4eGPP-0DleCKw_7mTlG52GsgoBYnF6-7bsFiAQ_XiZpWUioAGo32YCQYypQmgjLxVGnzysC1v-5IOvpg&loc=vn';
+                    if (Hls.isSupported()) {
+                        var hls = new Hls();
+                        hls.loadSource(videoSrc);
+                        hls.attachMedia(video);
+                    }
+                    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                        video.src = videoSrc;
+                    }
+                </script>
+                <script>
+                    videojs('player', {
+                        controls: true,
+                        nativeControlsForTouch: true,
+                        width: 1280,
+                        height: 640,
+                        playbackRates: [0.5, 1, 1.5, 2]
+                    });
+                    var vjs = videojs('player');
+                    var vjs_ass = vjs.ass({
+                        'src': ["subs/os.ass"],
+                        label: "vietsub",
+                        videoWidth: 640,
+                        videoHeight: 360,
+                    });
+
+                </script>
             </div>
+        </div>
+        <div class="flex-box-container-eps">
+            <h5>Tập</h5>
+            <div class="flex-container-eps">
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">8</a>
+                <a href="">9</a>
+                <a href="">10</a>
+                <a href="">11</a>
+                <a href="">12</a>
+            </div>
+        </div>
     </section>
 </body>
 
