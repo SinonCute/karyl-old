@@ -96,5 +96,8 @@ $(document).ready(function () {
             console.log(error);
         });
 
-
+        if (!id) {
+            // nếu không có, chuyển hướng người dùng đến trang khác
+            window.location.href = '/';
+        }
 })
