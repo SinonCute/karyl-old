@@ -30,7 +30,7 @@ $(document).ready(function () {
                     </div>
                 </div>
             </div>
-        `;
+         `;
 
                 $('#characters').html(html);
             } else {

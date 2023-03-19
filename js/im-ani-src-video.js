@@ -2,7 +2,9 @@ $(document).ready(function () {
     $.fx.off = false;
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const id = urlParams.get('id');
+    const idEpString = urlParams.get('id');
+    const [id, ep] = idEpString.split('?ep=');
+
     let urlGetToken = {
         method: 'get',
         maxBodyLength: Infinity,
@@ -45,11 +47,11 @@ $(document).ready(function () {
 
             axios.request(getEpisode)
                 .then((getEpisodebyID) => {
-                    for (i = 0; i < getEpisodebyID.data.data.episode[0].sources.length; i++) {
+                    for (i = 0; i < getEpisodebyID.data.data.episode[ep - 1].sources.length; i++) {
                         console.log(JSON.stringify(getEpisodebyID.data.data));
                         let getId = JSON.stringify({
                             query: `query {
-                              source(mediaId: "${getEpisodebyID.data.data.episode[0].sources[i].mediaId}", providerId: "${getEpisodebyID.data.data.episode[0].sources[i].providerId}", serverId: "${getEpisodebyID.data.data.episode[0].sources[i].serverId}", location: "vn") {
+                              source(mediaId: "${getEpisodebyID.data.data.episode[ep - 1].sources[i].mediaId}", providerId: "${getEpisodebyID.data.data.episode[ep - 1].sources[i].providerId}", serverId: "20", location: "vn") {
                                   id
                                   serverId
                                   sourceId
@@ -67,7 +69,6 @@ $(document).ready(function () {
                           }`,
                             variables: {}
                         });
-
                         let getSource = {
                             method: 'post',
                             maxBodyLength: Infinity,
@@ -81,11 +82,19 @@ $(document).ready(function () {
 
                         axios.request(getSource)
                             .then((source) => {
-                                console.log(JSON.stringify(source.data));
+                                console.log(JSON.stringify(source.data.data.source.url));
+                                window.parent.postMessage(JSON.stringify(source), '*');
                             })
                             .catch((error) => {
                                 console.log(error);
                             });
+                    }
+                    for (j = 1; j < getEpisodebyID.data.data.episode.length + 1; j++) {
+                        var link = document.createElement("a");
+                        link.id = "flex-eps";
+                        link.href = "video.html?id=" + id + "?ep=" + j;
+                        link.textContent = j;
+                        document.getElementById("flex-eps").appendChild(link);
                     }
                 })
                 .catch((error) => {
@@ -96,8 +105,8 @@ $(document).ready(function () {
             console.log(error);
         });
 
-        if (!id) {
-            // nếu không có, chuyển hướng người dùng đến trang khác
-            window.location.href = '/';
-        }
+    if (!id) {
+        // nếu không có, chuyển hướng người dùng đến trang khác
+        window.location.href = '/';
+    }
 })
