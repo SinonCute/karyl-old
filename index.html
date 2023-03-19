@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Xem anime vietsub hay tại Karyl.live, không giới hạn lượt xem, không quảng cáo.">
+  <meta property="og:image" content="https://i.ibb.co/VjJq6H4/image-1.png">
+  <meta property="twitter:image" content="https://i.ibb.co/VjJq6H4/image-1.png">
+  <meta property="og:url" content="https://karyl.live">
+  <meta name="theme-color" content="#EF4444">
+  <meta name="keywords" content="Anime, unica, creative, html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="/img/icon/weblogo.png">
+  <title>Trang chủ (Home) - Karyl</title>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/im-ani-sc.js"></script>
+  <script src="js/im-ani-sc-pop.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/plyr.css" type="text/css">
+  <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+  <!-- Header Section Begin -->
+  <header class="header">
+    <div class="container">
+      <div class="col-lg-2">
+      </div>
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="header__logo">
+            <a href="/">
+              <img src="/img/icon/weblogo.png" alt="" width="50px" height="50px">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="header__nav">
+            <nav class="header__menu mobile-menu">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Thể Loại</a></li>
+                <li><a href="">Top Anime</a></li>
+                <li><a href="">Season</a></li>
+                <li><a href="#">Thư viện</a>
+                </li>
+                <li><a href="/search.html"><i class="icon_search"></i></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__slider owl-carousel">
+        <div class="hero__items set-bg" data-setbg="img/hero/banner3.png">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero__text">
+                <div class="label">Romance</div>
+                <div class="label">Comedy</div>
+                <div class="hero__bg">
+                  <h2>Gotoubun no Hanayome Movie</h2>
+                  <p>Khi năm cô gái trẻ đáng yêu ghét học thuê Futaro làm gia sư bán thời gian, anh
+                    không
+                    chỉ hướng dẫn cách học mà còn mở khóa cả trái tim của họ. Thời gian dành cho họ
+                    đã khiến
+                    tất cả xích lại gần nhau hơn, tình cảm ngày càng lớn giữa các cô gái và Futaro.
+                    Khi học xong năm thứ ba trung học và sắp đến lễ hội trường cuối cùng, sẽ có
+                    những biến cố gì sắp xảy ra. Liệu có tương lai với một trong số họ với Futaro?
+                  </p>
+                </div>
+                <a href="/video.html"><span><i class="fa fa-play"></i> Xem Trailer</span> </a>
+                <a href="details.html"><span><i class="fa fa-play"></i> Thông Tin</span> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__items set-bg" data-setbg="img/hero/highlight1.webp">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero__text">
+                <div class="label">Action</div>
+                <div class="label">Comedy</div>
+                <div class="label">Supernatural</div>
+                <div class="hero__bg">
+                  <h2>Spy x Family Part 2</h2>
+                  <p>Spy x family kể về một gia đình chắp vá có một ông bố là điệp viên, bà mẹ là sát
+                    thủ
+                    và đứa con gái có siêu năng lực đọc suy nghĩ của người khác. Gia đình này được
+                    tạo
+                    ra nhằm thực hiện một nhiệm vụ người bố điệp viên nhưng để hoàn thành nhiệm vụ
+                    đó
+                    thì cả gia đình đã phải cùng nhau thực hiện nhiều nhiệm vụ nhỏ khác để rồi từ đó
+                    xảy
+                    ra những tình huống dở khóc dở cười.</p>
+                </div>
+                <a href="/video.html"><span><i class="fa fa-play"></i> Xem Trailer</span> </a>
+                <a href="/video.html"><span><i class="fa fa-play"></i> Thông Tin</span> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__items set-bg" data-setbg="img/hero/banner1.jpg">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero__text">
+                <div class="label">Action</div>
+                <div class="label">Slice of Life</div>
+                <div class="label">Comedy</div>
+                <div class="hero__bg">
+
+                  <h2>Lycoris Recoil</h2>
+                  <p>Một quán cafe phong cách Nhật, phục vụ cà phê ngon, bánh siêu ngọt... NHƯNG không
+                    chỉ có vậy. Từ công việc vận chuyển, hộ tống đến tiêu diệt thây ma và chiến đấu
+                    với quái vật khổng lồ, họ cũng đảm nhận! Đó chính là công việc của một tổ chức
+                    chống tội phạm bí mật mang tên DA (Direct Attack), với những người thực hiện là
+                    các cô gái trẻ được gọi là Lycoris. Hằng ngày, họ cố gắng hết mình để bảo vệ
+                    cuộc sống bình yên cho mọi người.</p>
+                </div>
+                <a href="/video.html"><span><i class="fa fa-play"></i> Xem Trailer</span> </a>
+                <a href="details.html"><span><i class="fa fa-play"></i> Thông Tin</span> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__items set-bg" data-setbg="/img/hero/slimetaobanner.jpg">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero__text">
+                <div class="label">Comedy</div>
+                <div class="label">Isekai</div>
+                <div class="label">Supernatural</div>
+                <div class="hero__bg">
+                  <h2>Slime Taoshite 300-NEN, Shiranai Uchi Ni Level MAX Ni Nattemashita</h2>
+                  <p>Aizawa Azusa là một kẻ "cuồng công việc", không yêu đương, không bạn bè, không
+                    niềm vui và sở thích, cô cống hiến cuộc đời mình cho công việc. Và kết quả là
+                    Azusa chết vì làm việc quá sức. Nhờ phép màu, cô được tái sinh trong dáng hình
+                    của một phù thủy 17 tuổi trường sinh bất lão...</p>
+                </div>
+                <a href="/video.html"><span><i class="fa fa-play"></i> Xem Trailer</span> </a>
+                <a href="details.html"><span><i class="fa fa-play"></i> Thông Tin</span> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__items set-bg" data-setbg="img/hero/redivebanner.webp">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero__text">
+                <div class="label">Comedy</div>
+                <div class="label">Adventure</div>
+                <div class="label">Fantasy</div>
+                <div class="hero__bg">
+                  <h2>Princess Connect! Re:Dive</h2>
+                  <p>Dựa theo một game cùng tên của Cygames, chuyện kể về cuộc hành trình hài hước của
+                    một chàng trai bị mất trí nhớ đang trên đường tìm lại ký ức với những người lần
+                    đầu tiên anh gặp mặt và vén lên bức màn sự thật của thế giới này.</p>
+                </div>
+                <a href="/video.html"><span><i class="fa fa-play"></i> Xem Trailer</span> </a>
+                <a href="details.html"><span><i class="fa fa-play"></i> Thông Tin</span> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="product spad">
+    <div class="container">
+      <div class="col-lg-8">
+        <div class="trending__product">
+          <div class="ani-slide">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="section-title">
+                <h4>Nổi Bật</h4>
+              </div>
+            </div>
+          </div>
+          <div class="ani-btn">
+            <button id="prev-btn" class="fa fa-angle-left"></button>
+            <button id="next-btn" class="	fa fa-angle-right"></button>
+          </div>
+          <div class="ani-slide" id="anime-list">
+            <div class="col-lg-4 col-md-6 col-sm-6" id="anime-item">
+              <div class="product__item">
+                <a href="" id="ani-href">
+                  <div class="product__item__pic set-bg" id="anime-bg">
+                  </div>
+                </a>
+                <div class="product__item__text">
+                  <ul class="anime-genres" id="anime-genres">
+                  </ul>
+                  <h5><a href="" id="anime-title"></a></h5>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-lg-8">
+        <div class="popular__product">
+          <div class="ani-slide">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="section-title">
+                <h4>Phổ Biến</h4>
+              </div>
+            </div>
+          </div>
+          <div class="ani-btn-pop">
+            <button id="prev-btn-pop" class="fa fa-angle-left"></button>
+            <button id="next-btn-pop" class="	fa fa-angle-right"></button>
+          </div>
+          <div class="ani-slide" id="anime-list-pop">
+            <div class="col-lg-4 col-md-6 col-sm-6" id="anime-item-pop">
+              <div class="product__item">
+                <a href="" id="ani-href-pop">
+                  <div class="product__item__pic set-bg" id="anime-bg-pop">
+                  </div>
+                </a>
+                <div class="product__item__text">
+                  <ul class="anime-genres-pop" id="anime-genres-pop">
+                  </ul>
+                  <h5><a href="" id="anime-title-pop"></a></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-6">
+          <div class="footer__nav">
+            <div class="footer__logo">
+              <a href="/"><img src="/img/icon/weblogo.png" alt="" width="100px" height="100px"></a>
+            </div>
+            <ul>
+              <li class="active"><a href="/">Home</a></li>
+            </ul>
+            <p></p>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
