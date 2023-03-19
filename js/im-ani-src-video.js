@@ -47,11 +47,9 @@ $(document).ready(function () {
 
             axios.request(getEpisode)
                 .then((getEpisodebyID) => {
-                    for (i = 0; i < getEpisodebyID.data.data.episode[ep - 1].sources.length; i++) {
-                        console.log(JSON.stringify(getEpisodebyID.data.data));
-                        let getId = JSON.stringify({
-                            query: `query {
-                              source(mediaId: "${getEpisodebyID.data.data.episode[ep - 1].sources[i].mediaId}", providerId: "${getEpisodebyID.data.data.episode[ep - 1].sources[i].providerId}", serverId: "20", location: "vn") {
+                    let getId = JSON.stringify({
+                        query: `query {
+                              source(mediaId: "${getEpisodebyID.data.data.episode[ep - 1].sources[0].mediaId}", providerId: "TVN", serverId: "20", location: "vn") {
                                   id
                                   serverId
                                   sourceId
@@ -67,28 +65,28 @@ $(document).ready(function () {
                                   
                               }
                           }`,
-                            variables: {}
-                        });
-                        let getSource = {
-                            method: 'post',
-                            maxBodyLength: Infinity,
-                            url: 'https://api.karyl.live/graphql',
-                            headers: {
-                                'Authorization': `Bearer ${response.data} `,
-                                'Content-Type': 'application/json'
-                            },
-                            data: getId
-                        };
+                        variables: {}
+                    });
+                    let getSource = {
+                        method: 'post',
+                        maxBodyLength: Infinity,
+                        url: 'https://api.karyl.live/graphql',
+                        headers: {
+                            'Authorization': `Bearer ${response.data} `,
+                            'Content-Type': 'application/json'
+                        },
+                        data: getId
+                    };
 
-                        axios.request(getSource)
-                            .then((source) => {
-                                console.log(JSON.stringify(source.data.data.source.url));
-                                window.parent.postMessage(JSON.stringify(source), '*');
-                            })
-                            .catch((error) => {
-                                console.log(error);
-                            });
-                    }
+                    axios.request(getSource)
+                        .then((source) => {
+                            console.log(JSON.stringify(source.data.data.source.url));
+                            window.parent.postMessage(JSON.stringify(source), '*');
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                        });
+
                     for (j = 1; j < getEpisodebyID.data.data.episode.length + 1; j++) {
                         var link = document.createElement("a");
                         link.id = "flex-eps";
