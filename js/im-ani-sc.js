@@ -3,7 +3,7 @@ $(document).ready(function () {
     $.fx.off = false;
     var animeItem = $("#anime-item").clone();
     var currentIndex = 0;
-    const urlTrend = "https://api.karyl.live/consumet/meta/anilist/trending?page=1&perPage=51";
+    const urlTrend = "https://api-us.karyl.live/consumet/meta/anilist/trending?page=1&perPage=51";
     const getData = () => {
         axios.get(urlTrend).then(response => {
             for (var i = 0; i < response.data.results.length; i++) {
